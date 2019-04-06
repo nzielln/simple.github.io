@@ -1,0 +1,406 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+
+}
+
+body {
+  background-color: #f8f8f8;
+}
+
+
+/*position and background-colors*/
+header {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 60px;
+  margin-bottom: 10px;
+
+}
+
+.title h1 a {
+  background-color:  #fff;
+  text-decoration: none;
+}
+
+.everything, .everything-list {
+  width: 1680px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.everything-list {
+  height: 2000px;
+  margin-bottom: 100px;
+}
+
+
+.below-shop, .below-todo, .below-rdm {
+  width: 1000px;
+  height: 1860px;
+  display: flex;
+  margin-top: 20px;
+
+
+}
+
+.side {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border-right: 1px solid #c3c1c1;
+  height: 100%;
+  width: 30%;
+}
+
+
+.main-lists {
+  background-color: #fff;
+  width: 100%;
+  height: 40px;
+  border-right: 1px solid #c3c1c1;
+  transition-timing-function: ease;
+}
+
+.main-lists.active {
+  background-color: #fff;
+  width: 100%;
+  height: 60px;
+  border-right: 1px solid #c3c1c1;
+}
+
+
+.main-lists h3 a {
+  margin-left: 30px;
+}
+
+.side, .main-work-space, .main-lists h3, .main-lists a, .add-icon svg {
+  background-color: #fff;
+
+}
+
+.add-icon  {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 10px;
+  margin-right: 30px;
+  cursor: pointer;
+
+}
+
+#todo-main, #shop-main, #rdm-main {
+  background-color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.main-work-space {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 100%;
+  width: 70%;
+}
+
+.intro-cont {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+  width: 1000px;
+
+}
+
+h1 {
+  text-align: center;
+}
+
+h1 .bolder {
+  font-weight: 600;
+}
+.question-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 140px;
+  margin-bottom: 20px;
+}
+
+.question-box h1, .question-box {
+    background-color: #fff;
+
+}
+
+.lists-choices {
+    width: 500px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.todo-choice h3, .todo-choice h3 a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 30px;
+  background-color: #fff;
+}
+
+.shop-choice h3, .shop-choice h3 a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 30px;
+  background-color: #fff;
+}
+
+.rdm-choice h3, .rdm-choice h3 a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 30px;
+  background-color: #fff;
+}
+
+.list-cont ul li, .todo-top-main-title h3, .todo-top-main-group h3  {
+  background-color: #fff;
+
+}
+
+.todo-top-main-title, .shop-top-main-title, .rdm-top-main-title  {
+  margin-top: 20px;
+  width: 90%;
+  margin-right: 0px 30px 0px 30px;
+}
+.add-new input, .date, .date p, .add-it, #todo-upcoming h3, .input-field, .input-field p {
+  background-color: #fff;
+}
+
+.todo-top-main-title h3, .todo-top-main-group h3, .list-cont ul li, .add-new p, .shop-top-main-title h3 {
+  margin-left: 30px;
+}
+
+
+#todo-complete {
+  margin-top: 100px;
+}
+/*box-shadow*/
+
+.question-box, .below-shop, .todo-choice, .shop-choice, .rdm-choice, .below-todo, .below-rdm, header {
+  box-shadow: 0px 2px 2px #C3C1C1;
+  margin-bottom: 20px;
+
+
+}
+
+.main-lists {
+  box-shadow: 0px 2px 2px #C3C1C1;
+}
+
+#todo-main {
+  z-index: 3;
+}
+
+#shop-main {
+  z-index: 2;
+}
+
+#rdm-main {
+  z-index: 1;
+}
+
+/*fonts and colors and everything else*/
+
+.title h1 a {
+  font-size: 25px;
+  color: #3E3E3E;
+  font-weight: 600;
+
+}
+
+.question-box h1 {
+  font-size: 20px;
+  color: #3E3E3E;
+  font-weight: 400;
+
+}
+
+.question-box .light {
+  color: #3E3E3E;
+}
+
+.intro-cont h3 a, .main-lists h3 a {
+  font-size: 14px;
+  color: #ED9C9C;
+  font-weight: 400;
+  text-decoration: none;
+
+}
+
+#main-title h3 a {
+  font-size: 14px;
+  color: #3E3E3E;
+  opacity: 1;
+  font-weight: 400;
+  text-decoration: none;
+}
+    /*to do fonts and colors*/
+.todo-top-main-title h3, .shop-top-main-title h3, .rdm-top-main-title h3 {
+  font-size: 14px;
+  color: #3E3E3E;
+  font-weight: 400;
+
+}
+
+
+.todo-top-main-group h3, .todo-complete h3  {
+  font-size: 14px;
+  color: #3E3E3E;
+  font-weight: 400;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.list-cont ul li, .list-cont .complete-list-item ul li {
+  font-size: 14px;
+  color: #3E3E3E;
+  font-weight: 400;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  width: 85%;
+}
+
+.input-field p {
+  font-size: 14px;
+  color: #3E3E3E;
+  font-weight: 400;
+  font-style: italic;
+  margin-bottom: 5px;
+
+}
+
+.input-field input[placeholder="name your random list"] {
+  margin-top: 10px;
+}
+.input-field input[placeholder="add new task"], .input-field input[placeholder="add new item"], .input-field input[placeholder="name your random list"] {
+  font-size: 14px;
+  color: #3E3E3E;
+  opacity: 0.6;
+  font-weight: 400;
+  font-style: italic;
+  margin-bottom: 5px;
+  padding-right: 10px;
+  margin-left: 30px;
+  margin-top: 10px;
+}
+
+
+.date input[type="date"] {
+  font-size: 14px;
+  color: #3E3E3E;
+  opacity: 0.4;
+  font-weight: 400;
+  font-style: italic;
+  margin-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#todo-input-field input, #task-day input, #rdm-input-field input {
+  width: 550px;
+  height: 20px;
+  border-bottom-width: 1px;
+  border-bottom-color: rgba(112, 112, 112, 0.3);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  margin-left: 30px;
+
+}
+
+.add-it button[type="button"] {
+  width: 80px;
+  height: 20px;
+  font-size: 12px;
+  color: #3E3E3E;
+  font-weight: 600;
+  margin-top: 10px;
+  margin-left: 30px;
+  margin-bottom: 5px;
+  padding-right: 10px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  padding-top: 5px;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0px 2px 2px #C3C1C1;
+
+}
+
+#rdm-top-main-title {
+  margin-left: 30px;
+}
+
+.alert {
+  height: 20px;
+}
+
+#alert, #alert-item, #alert-task, #alert-name {
+  font-size: 14px;
+  color: #ED9C9C;
+  font-style: italic;
+  font-weight: 400;
+  margin-bottom: 5px;
+  margin-left: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 20px;
+}
+
+#todo-item, #complete, #shop-item, #rdm-item {
+  font-size: 14px;
+  color: #3E3E3E;
+  font-style: italic;
+  font-weight: 300;
+  margin-bottom: 5px;
+  margin-left: 30px;
+  list-style-type: none;
+
+}
+
+
+.line-through {
+  font-size: 14px;
+  color: #3E3E3E;
+  font-style: italic;
+  text-decoration: line-through;
+  font-weight: 600;
+  margin-bottom: 5px;
+  margin-left: 30px;
+  list-style-type: none;
+
+}
+
+#todo-item, #shop-item, #rdm-item {
+  cursor: pointer;
+}

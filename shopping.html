@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Simple List</title>
+<link href="stylesheet.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i" rel="stylesheet">
+</head>
+
+<body>
+  <div class="everything-list">
+    <header>
+        <div class="title">
+          <h1><a href="index.html">simple.</a></h1>
+        </div>
+    </header>
+<!--to do menu item-->
+<div class="below-todo">
+    <div class="side">
+        <div class="main-lists" id="todo-main">
+            <div class="todo-main-title" id="main-title">
+                    <h3><a href="todo.html">to do</a></h3>
+            </div>
+            <div class="add-icon" id="todo-add">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="136.766" height="124" viewBox="0 0 136.766 124" style="visibility:hidden;">
+                        <g id="Group_1" data-name="Group 1" transform="translate(2 2)" opacity="0.698">
+                          <line id="Line_1" data-name="Line 1" x2="132.766" transform="translate(0 60)" fill="none" stroke="#3e3e3e" stroke-linecap="round" stroke-width="10"/>
+                          <line id="Line_2" data-name="Line 2" y2="120" transform="translate(66.383 0)" fill="none" stroke="#3e3e3e" stroke-linecap="round" stroke-width="10"/>
+                        </g>
+                      </svg>
+
+            </div>
+        </div>
+<!--shopping menu item-->
+        <div class="main-lists active" id="shop-main">
+            <div class="shop-main-title">
+                <h3><a href="shopping.html">shopping list</a></h3>
+            </div>
+            <div class="add-icon" id="shop-add">
+                <svg xmlns="http://www.w3.org/2000/svg" width="136.766" height="15" viewBox="0 0 136.766 124">
+                    <g id="Group_1" data-name="Group 1" transform="translate(2 2)" opacity="0.698">
+                        <line id="Line_1" data-name="Line 1" x2="132.766" transform="translate(0 60)" fill="none"
+                            stroke="#3e3e3e" stroke-linecap="round" stroke-width="10" />
+                        <line id="Line_2" data-name="Line 2" y2="120" transform="translate(66.383 0)" fill="none"
+                            stroke="#3e3e3e" stroke-linecap="round" stroke-width="10" />
+                    </g>
+                </svg>
+            </div>
+         </div>
+<!--rdm menu item-->
+        <div class="main-lists" id="rdm-main">
+             <div class="rdm-main-title" id="main-title">
+                <h3><a href="rdm.html">random list</a></h3>
+            </div>
+            <div class="add-icon" id="rdm-add">
+                <svg xmlns="http://www.w3.org/2000/svg" width="136.766" height="124" viewBox="0 0 136.766 124" style="visibility:hidden;">
+                    <g id="Group_1" data-name="Group 1" transform="translate(2 2)" opacity="0.698">
+                        <line id="Line_1" data-name="Line 1" x2="132.766" transform="translate(0 60)" fill="none"
+                            stroke="#3e3e3e" stroke-linecap="round" stroke-width="10" />
+                        <line id="Line_2" data-name="Line 2" y2="120" transform="translate(66.383 0)" fill="none"
+                            stroke="#3e3e3e" stroke-linecap="round" stroke-width="10" />
+                    </g>
+                </svg>
+
+            </div>
+        </div>
+    </div>
+
+<!--main work place for to do list// include input field but this should be, by default, hidden until the plus sign is clicked-->
+    <div class="main-work-space" id="shop-space">
+    <div class="list-top-title" id="shop-top-title">
+        <div class="shop-top-main-title">
+            <h3>shopping list</h3>
+        </div>
+        <div class="list-cont">
+            <div class="list-list-item">
+                 <ul id="shop-list">
+                    <li id="shop-item"></li>
+                </ul>
+            </div>
+            <div class="alert" style="visibility:hidden;">
+              <p id="alert-item">make sure you add an item</p>
+            </div>
+            <form id="form-shop">
+            <div class="add-new" id="add-new-todo">
+                <div class="input-field" id="todo-input-field">
+                    <p style="visibility:hidden;">add new item</p>
+                    <input id="iteminput" type="text" placeholder="add new item">
+                </div>
+                <div class="add-it">
+                    <button id="itemsubmit" type="button">add item</button>
+                </div>
+            </div>
+          </form>
+        </div>
+        </div>
+    </div>
+  </div>
+</div>
+<script src="shop.js"></script>
+</body>
+
+</html>
