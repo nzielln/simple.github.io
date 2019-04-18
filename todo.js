@@ -24,7 +24,7 @@ let taskArr = sessionStorage.getItem('tasks') ? JSON.parse(sessionStorage.getIte
 sessionStorage.setItem('tasks', JSON.stringify(taskArr));
 const taskData = JSON.parse(sessionStorage.getItem('tasks'));
 
-
+// triggers 'CLICK' event on 'ENTER'
 const inputEnter = document.getElementById('taskinput');
 inputEnter.addEventListener("keypress", (event) => {
   if (event.keyCode == 13) {
@@ -32,7 +32,7 @@ inputEnter.addEventListener("keypress", (event) => {
     submit.click();
   }
 })
-
+//add new task to list
 function addTask(text) {
 
   const toList = document.getElementById('todo-list');
@@ -79,7 +79,7 @@ taskData.forEach(task => {
   addTask(task);
 
 })
-
+//delete saved data from sessionstorage
 const clearButton = document.getElementById('clearsubmit')
 const fullList = document.getElementById('todo-list')
 const compList = document.getElementById('complete-list')
@@ -92,6 +92,7 @@ clearButton.addEventListener('click', () => {
   while (compList.firstChild) {
     compList.removeChild(compList.firstChild);
   }
+  form.reset();
 })
 
 

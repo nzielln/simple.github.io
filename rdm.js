@@ -53,7 +53,7 @@ inName.addEventListener("keypress", (event) => {
   }
 })
 
-
+//create new list by adding name
 function addName(text) {
   const toListName = document.getElementById('rdm-top-main-title');
   const nameForm = document.getElementById('rdm-form');
@@ -108,7 +108,7 @@ document.getElementById('newbutton').hidden = false;
 
 const form = document.getElementById('rdm-task-form');
 const submit = document.getElementById('tasksubmit');
-
+//add new task or item to list
 function addTask(text) {
   const toList = document.getElementById('rdm-list');
   let newTask = document.createElement('li');
@@ -117,6 +117,7 @@ function addTask(text) {
   toList.appendChild(newTask);
   form.reset();
 
+  //cross out item or task
   newTask.addEventListener("click", (event) => {
   if (!newTask.classList.contains('line-through')) {
   newTask.classList.add('line-through');
@@ -125,7 +126,7 @@ function addTask(text) {
 }
 
 })
-
+//delete item/task
 newTask.addEventListener("dblclick", (event) => {
 newTask.parentNode.removeChild(newTask);
 
@@ -172,4 +173,5 @@ clearButton.addEventListener('click', () => {
   while (fullList.firstChild) {
     fullList.removeChild(fullList.firstChild);
   }
+  form.reset();
 })
