@@ -81,7 +81,7 @@ itemData.forEach(item => {
 const clearButton = document.getElementById('clearsubmit')
 const fullList = document.getElementById('shop-list')
 clearButton.addEventListener('click', () => {
-  sessionStorage.clear();
+  sessionStorage.removeItem('items', JSON.stringify(itemArr));
   while (fullList.firstChild) {
     fullList.removeChild(fullList.firstChild);
   }

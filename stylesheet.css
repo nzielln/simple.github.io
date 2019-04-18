@@ -7,6 +7,8 @@
 
 body {
   width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 
@@ -18,6 +20,7 @@ header {
   justify-content: center;
   width: 100%;
   height: 60px;
+  border-bottom: 1px solid rgb(62, 62, 62, 0.4);
 
 }
 
@@ -43,15 +46,16 @@ header {
 }
 
 .below {
-  width: 100%;
+  width: 90%;
   display: flex;
   justify-content: center;
 }
 .below-shop, .below-todo, .below-rdm {
-  width: 100%;
+  width: 80%;
   height: 100%;
   display: flex;
-
+  border-right: 1px solid rgb(62, 62, 62, 0.4);
+  border-bottom: 1px solid rgb(62, 62, 62, 0.4);
 
 }
 
@@ -61,8 +65,11 @@ header {
   justify-content: flex-start;
   align-items: flex-start;
   border-right: 1px solid #c3c1c1;
-  height: 80%;
+  height: 100%;
   width: 40%;
+  border-left: 1px solid rgb(62, 62, 62, 0.4);
+  border-bottom: 1px solid rgb(62, 62, 62, 0.4);
+
 }
 
 
@@ -195,12 +202,12 @@ margin-left: 30px;
   margin-top: 30px;
   
 }
-/*box-shadow*/
+/*box-shadow
 
 .below-shop, .below-todo, .below-rdm, header {
   box-shadow: 0px 2px 2px #C3C1C1;
 
-}
+}*/
 
 #todo-main {
   z-index: 3;
@@ -309,18 +316,6 @@ margin-left: 30px;
   margin-top: 10px;
 }
 
-
-.date input[type="date"] {
-  font-size: 14px;
-  color: #3E3E3E;
-  opacity: 0.4;
-  font-weight: 400;
-  font-style: italic;
-  margin-bottom: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
 .input-field, .rdm-fill-space {
   width: 100%;
 }
@@ -332,7 +327,6 @@ margin-left: 30px;
   border-top: none;
   border-left: none;
   border-right: none;
-
 
 }
 
@@ -363,7 +357,7 @@ button[type="button"] {
 }
 
 #alert, #alert-item, #alert-task, #alert-name {
-  font-size: 14px;
+  font-size: 16px;
   color:#ED9C9C;
   font-style: italic;
   font-weight: 400;
@@ -373,14 +367,13 @@ button[type="button"] {
 }
 
 #todo-item, #complete, #shop-item, #rdm-item {
-  font-size: 14px;
+  font-size: 16px;
   color: #3E3E3E;
   font-style: italic;
   font-weight: 300;
   margin-bottom: 5px;
   margin-left: 30px;
   list-style-type: none;
-  text-align: center;
 
 }
 
@@ -502,6 +495,7 @@ button[type="button"] {
   .list-cont ul li, .list-cont .complete-list-item ul li {
     font-size: 15px;
     font-weight: 400;
+    text-align: center;
   }
 
   .list-cont {
@@ -509,6 +503,7 @@ button[type="button"] {
     align-items: center;
     flex-direction: column;
     margin: 0px auto;
+    text-align: center;
   }
 
   #rdm-list {
@@ -516,6 +511,7 @@ button[type="button"] {
     flex-direction: column;
     align-items: center;
     margin-top: 10px;
+    text-align: center;
   }
 
   #rdm-item  {
@@ -527,6 +523,7 @@ button[type="button"] {
     flex-direction: column;
     align-items: center;
     margin-top: 10px;
+    text-align: center;
   }
 
   #todo-item  {
@@ -538,6 +535,7 @@ button[type="button"] {
     flex-direction: column;
     align-items: center;
     margin-top: 10px;
+    text-align: center;
   }
 
   #shop-item  {

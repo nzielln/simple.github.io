@@ -85,7 +85,7 @@ const fullList = document.getElementById('todo-list')
 const compList = document.getElementById('complete-list')
 
 clearButton.addEventListener('click', () => {
-  sessionStorage.clear();
+  sessionStorage.removeItem('tasks', JSON.stringify(taskArr));
   while (fullList.firstChild) {
     fullList.removeChild(fullList.firstChild);
   }

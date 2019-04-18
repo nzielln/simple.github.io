@@ -169,7 +169,8 @@ taskDataRdm.forEach(rdmtask => {
 const clearButton = document.getElementById('clearsubmit')
 const fullList = document.getElementById('rdm-list')
 clearButton.addEventListener('click', () => {
-  sessionStorage.clear();
+  sessionStorage.removeItem('rdmtasks', JSON.stringify(taskArrRdm));
+  sessionStorage.removeItem('rdmnames', JSON.stringify(nameArrRdm));
   while (fullList.firstChild) {
     fullList.removeChild(fullList.firstChild);
   }
