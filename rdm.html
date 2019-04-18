@@ -4,13 +4,14 @@
 <title>Simple List</title>
 <link href="stylesheet.css" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
 <body>
   <div class="everything-list">
     <header>
         <div class="title">
-            <h1><a href="index.html">simple.</a></h1>
+            <h1><a href="index.html">simple<span class="dot">.</span></a></h1>
         </div>
     </header>
 <!--to do menu item-->
@@ -70,13 +71,15 @@
     <div class="list-top-title" id="rdm-top-title">
       <div class="rdm-top-main-title" id="rdm-top-main-title">
 
+          </div>
       </div>
+      <div class="rdm-fill-space">
       <div class="alert" style="visibility:hidden;">
         <p id="alert-name">please choose a name</p>
       </div>
       <form id="rdm-form" autocomplete="off">
           <div class="input-field" id="rdm-input-field">
-            <input id="nameinput" type="text" placeholder="name your random list" autocomplete="off">
+            <input id="nameinput" type="text" placeholder="name your random list" autocomplete="off" required>
           </div>
         <div class="add-it">
             <button id="listsubmit" type="button">create list</button>
@@ -101,7 +104,11 @@
         </div>
       </form>
     </div>
+    <div class="add-it" id="newbutton">
+        <button id="clearsubmit" type="button">clear</button>
+    </div>
 </div>
+
 </div>
 </div>
 <script src="rdm.js"></script>

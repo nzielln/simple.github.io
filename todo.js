@@ -1,6 +1,8 @@
-//overall
-window.addEventListener("load", () => {
-  document.getElementById('form').hidden = true;
+//on load, hide buttons and form until + is clicked
+  window.addEventListener("load", () => {
+    document.getElementById('add-new-todo').hidden = true;
+    document.getElementById('newbutton').hidden = true;
+
 
 
 
@@ -9,7 +11,8 @@ window.addEventListener("load", () => {
 
 
 document.getElementById('todo-add').addEventListener("click", () => {
-  document.getElementById('form').hidden = false;
+  document.getElementById('add-new-todo').hidden = false;
+  document.getElementById('newbutton').hidden = false;
   document.getElementById('todo-add').style.visibility = "hidden";
 
 });
@@ -17,18 +20,18 @@ document.getElementById('todo-add').addEventListener("click", () => {
 
 //create and add to list, for submit button
 const submit = document.getElementById('tasksubmit');
-submit.addEventListener("click", () => {
-  const input = document.getElementById('taskinput');
-  const value = input.value;
-  if (input.value === "" || input.value === " ") {
-      document.getElementById('alert').style.visibility = "visible";
-  } else if (value) {
-    addTask(value);
-    document.getElementById('alert').style.visibility = "hidden";
+let taskArr = sessionStorage.getItem('tasks') ? JSON.parse(sessionStorage.getItem('tasks')) : [];
+sessionStorage.setItem('tasks', JSON.stringify(taskArr));
+const taskData = JSON.parse(sessionStorage.getItem('tasks'));
+
+
+const inputEnter = document.getElementById('taskinput');
+inputEnter.addEventListener("keypress", (event) => {
+  if (event.keyCode == 13) {
+    event.preventDefault();
+    submit.click();
   }
-
-
-});
+})
 
 function addTask(text) {
 
@@ -37,6 +40,7 @@ function addTask(text) {
   let newTask = document.createElement('li');
   newTask.innerText = text;
   newTask.setAttribute("id", "todo-item");
+
   toList.appendChild(newTask);
   form.reset();
 
@@ -53,10 +57,42 @@ function addTask(text) {
 })
 }
 
+submit.addEventListener("click", () => {
+  const input = document.getElementById('taskinput');
+  const value = input.value;
+  if (input.value === "" || input.value === " ") {
+      document.getElementById('alert').style.visibility = "visible";
+  } else if (value) {
+//add to storage data
 
-document.getElementById('today').hidden = true;
+    taskArr.push(value);
+    sessionStorage.setItem('tasks', JSON.stringify(taskArr));
 
-document.getElementById('task-day').hidden = true;
+//add to list
+    addTask(value);
+    document.getElementById('alert').style.visibility = "hidden";
+  }
+
+})
+
+taskData.forEach(task => {
+  addTask(task);
+
+})
+
+const clearButton = document.getElementById('clearsubmit')
+const fullList = document.getElementById('todo-list')
+const compList = document.getElementById('complete-list')
+
+clearButton.addEventListener('click', () => {
+  sessionStorage.clear();
+  while (fullList.firstChild) {
+    fullList.removeChild(fullList.firstChild);
+  }
+  while (compList.firstChild) {
+    compList.removeChild(compList.firstChild);
+  }
+})
 
 
 
