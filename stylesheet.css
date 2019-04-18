@@ -479,7 +479,6 @@ button[type="button"] {
     margin: 0px auto;
     margin-top: 20px;
   }
-  /*box-shadow*/
 
   #todo-main, #shop-main, #rdm-main {
     display: flex;
